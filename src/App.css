@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* esconder se algo transbordar do site */
+    overflow-x: hidden; 
+}
+

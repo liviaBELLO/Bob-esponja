@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.main{
+    height: 100%;
+    background-image: url('../../../public/assets/bg-main.jpg');
+    background-size: cover; 
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+} 
+
+/* favContainer só aparece no documento após um evento */
+/* Estilizações que o fav container vai ter em comum com o CardContainer */
+.favContainer, .cardContainer{
+    display: flex;
+    border-radius: 30px;
+    box-shadow: 9px 9px 3px rgba(0, 0, 0, 0.30);
+    background-color: white;
+}
+
+.cardContainer{
+    width: 25.5%;
+    height: 650px;
+    margin-top: 5%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Assim como o favContainer, o favPersonagem só aparece no documento após um evento */
+.cardPersonagem, .favPersonagem{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 80%;
+    height: 60%;
+    border-radius: 25px;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Estilização padrão para todos os h2 */
+h2{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 30px;
+}
+
+/* Container que guarda a descrição do personagem */
+.textContainer{
+    width: 65%;
+    font-weight: 600;
+    text-align: justify;
+}
+/* Tamanho padrão para imagens dos personagens */
+img{
+    width: 160px;
+}
+
+/* Estilização do botao (Escolher como favorito) */
+.btnContainer button{
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    background-color: #B9EBF1;
+    box-shadow: 4px 4px 2px #9AD6DD;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    /* Animação do botão */
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #9ad6dd57;
+        clip-path: circle(0% at 100% 0);
+        transition: clip-path 0.5s ease;
+        border-radius: 20px;
+        box-shadow: 4px 4px 2px #85bdc3;
+
+    }
+    &:hover {
+        &::before {
+          clip-path: circle(150% at 100% 0%);
+          z-index: -1;
+        }
+      }
+}
+
+/* Colocando o texto em cima de outros elementos para o mesmo nao ficar escondido */
+.btnContainer button p{
+    z-index: 2;
+}
+
+/* Estilizações de elementos que aparecerão após evento */
+.favParent{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favContainer{
+    justify-content: center;
+    height: min-content;
+    width: 400px;
+}
