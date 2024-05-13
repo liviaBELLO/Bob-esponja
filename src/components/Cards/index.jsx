@@ -75,7 +75,7 @@ export default function Cards({}){
                                                 <h2> Seu personagem favorito é:</h2> 
                                             </div> 
                                             <div class="favImg"> 
-                                                <img src="../../../public/assets/${nome}.png"                                 
+                                                <img src="../../assets/${nome}.png"                                 
                                             </div>
                                             <div class="nomeFav">
                                             <h2> ${nome} </h2>
